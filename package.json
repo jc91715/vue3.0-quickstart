@@ -21,6 +21,7 @@
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "vue-cli-plugin-axios": "0.0.4",
+    "vue-cli-plugin-postcss-precss": "^1.0.1",
     "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
@@ -38,7 +39,35 @@
   },
   "postcss": {
     "plugins": {
-      "autoprefixer": {}
+      "postcss-assets": false,
+      "postcss-import": {},
+      "postcss-extend-rule": {},
+      "postcss-advanced-variables": {},
+      "postcss-plugin-bem-atrule": {
+        "defaultNamespace": "el",
+        "style": "suit",
+        "separators": {
+          "descendent": "__",
+          "modifier": "--"
+        },
+        "shortcuts": {
+          "utility": "util",
+          "component": "b",
+          "modifier": "m",
+          "descendent": "e"
+        }
+      },
+      "postcss-preset-env": {
+        "stage": 2
+      },
+      "postcss-atroot": {},
+      "postcss-property-lookup": {},
+      "postcss-nested": {},
+      "postcss-nested-ancestors": {},
+      "postcss-calc": {},
+      "postcss-sass-color-functions": {},
+      "lost": false,
+      "postcss-utils": {}
     }
   },
   "browserslist": [
